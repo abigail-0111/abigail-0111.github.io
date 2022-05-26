@@ -31,9 +31,8 @@
     <a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true; precision: medium;" embedded
         arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
         <!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
-        <a-nft type="nft"
-            url="https://abigail-0111.github.io/http://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/trex-image/trex"
-            smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5">
+        <a-nft type="nft" url="./ar-demo-src/image-tracking/nft/trex/trex-image/trex" smooth="true" smoothCount="10"
+            smoothTolerance=".01" smoothThreshold="5">
             <a-entity gltf-model="./ar-demo-src/image-tracking/nft/trex/scene.gltf" scale="5 5 5"
                 position="150 300 -100">
             </a-entity>
