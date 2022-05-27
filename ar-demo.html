@@ -1,4 +1,78 @@
-<script
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <title>Vite App</title>
+
+    <script src="https://cdn.bootcss.com/vConsole/3.2.2/vconsole.min.js"></script>
+    <script>
+        var vConsole = new window.VConsole();
+    </script>
+    <script
+        src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    <script src="./ar-demo-src/gesture-detector.js"></script>
+    <script src="./ar-demo-src/gesture-handler.js"></script>
+    <style>
+        .arjs-loader {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .arjs-loader div {
+            text-align: center;
+            font-size: 1.25em;
+            color: white;
+        }
+    </style>
+</head>
+
+<body style="margin : 0px; overflow: hidden;">
+
+    <div class="arjs-loader">
+        <div>Loading, please wait...</div>
+    </div>
+    <a-scene arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;" embedded
+        renderer="logarithmicDepthBuffer: true;" vr-mode-ui="enabled: false" gesture-detector id="scene">
+        <a-nft type="nft" url="./ar-demo-src/image-tracking/dataNtf/animal" smooth="true" smoothCount="10"
+            smoothTolerance=".01" smoothThreshold="5" raycaster="objects: .clickable" emitevents="true"
+            cursor="fuse: false; rayOrigin: mouse;">
+            <a-entity gltf-model="./ar-demo-src/image-tracking/gltfData/test/scene.gltf" scale="5 5 5"
+                position="50 50 0" class="clickable" gesture-handler></a-entity>
+        </a-nft>
+
+        <a-nft type="nft" url="./ar-demo-src/image-tracking/nft/trex/trex-image/trex" smooth="true" smoothCount="10"
+            smoothTolerance=".01" smoothThreshold="5" raycaster="objects: .clickable" emitevents="true"
+            cursor="fuse: false; rayOrigin: mouse;">
+
+            <a-entity gltf-model="./ar-demo-src/image-tracking/nft/trex/scene.gltf" scale="5 5 5" position="50 150 0"
+                class="clickable" gesture-handler></a-entity>
+        </a-nft>
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+
+<script>
+    window.addEventListener("arjs-nft-loaded", (event) => {
+        // Hide loading overlay
+        console.log("arjs-nft-loaded")
+    });
+</script>
+
+</html>
+
+<!-- <script
     src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 
@@ -24,13 +98,11 @@
 </style>
 
 <body style="margin : 0px; overflow: hidden;">
-    <!-- minimal loader shown until image descriptors are loaded -->
     <div class="arjs-loader">
         <div>Loading, please wait...</div>
     </div>
     <a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true; precision: medium;" embedded
         arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
-        <!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
         <a-nft type="nft" url="./ar-demo-src/image-tracking/nft/trex/trex-image/trex" smooth="true" smoothCount="10"
             smoothTolerance=".01" smoothThreshold="5">
             <a-entity gltf-model="./ar-demo-src/image-tracking/nft/trex/scene.gltf" scale="5 5 5"
@@ -39,4 +111,4 @@
         </a-nft>
         <a-entity camera></a-entity>
     </a-scene>
-</body>
+</body> -->
