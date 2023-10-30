@@ -479,7 +479,7 @@ class se {
         }
       }
       if (this._catchHandler)
-        return i.groupCollapsed(`Error thrown when responding to:  ${u(s)}. Falling back to global Catch Handler.`), i.error("Error thrown by:", o), i.error(p), i.groupEnd(), this._catchHandler.handle({ url: s, request: e, event: t });
+        return i.groupCollapsed(`Error thrown when responding to:  ${u(s)}. Falling back to globalThis Catch Handler.`), i.error("Error thrown by:", o), i.error(p), i.groupEnd(), this._catchHandler.handle({ url: s, request: e, event: t });
       throw p;
     })), m;
   }
@@ -1580,7 +1580,7 @@ function Re(r) {
 function Ce(r, e) {
   Re(r), be(e);
 }
-Ce([{"revision":null,"url":"assets/home-99770cd4.css"},{"revision":null,"url":"assets/home-a1074849.js"},{"revision":null,"url":"assets/index-0e939e4f.js"},{"revision":null,"url":"assets/index-78058d01.css"},{"revision":"4e332594100833cef8478ec5b393e3f9","url":"index.html"},{"revision":"1872c500de691dce40960bb85481de07","url":"registerSW.js"},{"revision":"71dcfd191507c31dc79efe3341dfa3b9","url":"favicon.svg"},{"revision":"8e3a10e157f75ada21ab742c022d5430","url":"vite.svg"},{"revision":"f24c9384006bbc8de95ed69990459dca","url":"pwa-192x192.png"},{"revision":"4db5b8fe442a8f8fdc6e35cd40138057","url":"pwa-512x512.png"},{"revision":"29c9d4a1771231b1a436c31ac4292410","url":"manifest.webmanifest"}]);
+Ce([{"revision":null,"url":"assets/_commonjs-dynamic-modules-13fa1802.js"},{"revision":null,"url":"assets/_plugin-vue_export-helper-c27b6911.js"},{"revision":null,"url":"assets/baseSolanaAdapter.esm-ad495be1.js"},{"revision":null,"url":"assets/camera-76b0655e.js"},{"revision":null,"url":"assets/dutch-9a1ae5c2-a16720c5.js"},{"revision":null,"url":"assets/ethereumProvider.esm-5cdf98bf.js"},{"revision":null,"url":"assets/french-3d857bc5-8d49f87c.js"},{"revision":null,"url":"assets/german-4ae2ee33-5dea2eb8.js"},{"revision":null,"url":"assets/home-bb96d77b.css"},{"revision":null,"url":"assets/home-d7fbda9a.js"},{"revision":null,"url":"assets/index-74dea35a.js"},{"revision":null,"url":"assets/index-78058d01.css"},{"revision":null,"url":"assets/index-83bc3ffd.js"},{"revision":null,"url":"assets/index-90d34833.js"},{"revision":null,"url":"assets/inherits_browser-0e3245b6.js"},{"revision":null,"url":"assets/japanese-e1a7a06c-4e9481e4.js"},{"revision":null,"url":"assets/korean-95658e12-2c71056a.js"},{"revision":null,"url":"assets/mandarin-1e325876-bb618afe.js"},{"revision":null,"url":"assets/map-dcf37eac.js"},{"revision":null,"url":"assets/openloginAdapter.esm-d7ea5679.js"},{"revision":null,"url":"assets/phantomAdapter.esm-257a9471.js"},{"revision":null,"url":"assets/portuguese-c1293d6a-397537de.js"},{"revision":null,"url":"assets/solanaProvider.esm-b31210d1.js"},{"revision":null,"url":"assets/spanish-54ba83ea-0b7cdddb.js"},{"revision":null,"url":"assets/torusEvmAdapter.esm-ec767e50.js"},{"revision":null,"url":"assets/torusSolanaAdapter.esm-36007c22.js"},{"revision":null,"url":"assets/walletConnectV2Adapter.esm-093cb2ec.js"},{"revision":"836fc8b578cd2692b4ae26a8e9db9b32","url":"index.html"},{"revision":"1872c500de691dce40960bb85481de07","url":"registerSW.js"},{"revision":"71dcfd191507c31dc79efe3341dfa3b9","url":"favicon.svg"},{"revision":"8e3a10e157f75ada21ab742c022d5430","url":"vite.svg"},{"revision":"f24c9384006bbc8de95ed69990459dca","url":"pwa-192x192.png"},{"revision":"fec3d5de970445c0dec54e8fc9d02c16","url":"192.png"},{"revision":"e76b48b22ff1f7d2123b81d22fe25792","url":"512.png"},{"revision":"0c62637d293076ac8c886e769a3e911c","url":"manifest.webmanifest"}]);
 self.addEventListener("install", (r) => {
   r.waitUntil(
     new Promise((e) => {
@@ -1591,13 +1591,20 @@ self.addEventListener("install", (r) => {
 self.addEventListener("activate", async (r) => {
   r.waitUntil(
     new Promise((e) => {
+      e(!0);
+    })
+  );
+});
+self.addEventListener("push", (r) => {
+  r.waitUntil(
+    new Promise((e) => {
       const t = {
         body: "hello world.",
         icon: "/favicon.svg"
       };
       setTimeout(() => {
-        console.log("Notification.permission: ", Notification.permission), Notification.permission === "granted" && self.registration.showNotification("Push Notification", t);
-      }, 1e4), e(!0);
+        self.registration.showNotification("Push Notification", t);
+      }, 3e3), e(!0);
     })
   );
 });
