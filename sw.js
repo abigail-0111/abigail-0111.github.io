@@ -587,7 +587,7 @@ class se {
   }
 }
 let R;
-const O = () => (R || (R = new se(), R.addFetchListener(), R.addCacheListener()), R);
+const A = () => (R || (R = new se(), R.addFetchListener(), R.addCacheListener()), R);
 function ne(r, e, t) {
   let s;
   if (typeof r == "string") {
@@ -616,10 +616,10 @@ function ne(r, e, t) {
       funcName: "registerRoute",
       paramName: "capture"
     });
-  return O().registerRoute(s), s;
+  return A().registerRoute(s), s;
 }
 function ae(r) {
-  O().setDefaultHandler(r);
+  A().setDefaultHandler(r);
 }
 try {
   self["workbox:strategies:7.0.0"] && _();
@@ -949,7 +949,7 @@ class oe {
     return s || (t && t.status !== 200 && (t = void 0), t && t.status !== 200 && (t.status === 0 ? i.warn(`The response for '${this.request.url}' is an opaque response. The caching strategy that you're using will not cache opaque responses by default.`) : i.debug(`The response for '${this.request.url}' returned a status code of '${e.status}' and won't be cached as a result.`))), t;
   }
 }
-class A {
+class O {
   /**
    * Creates a new instance of the strategy and sets all documented option
    * properties as public instance properties.
@@ -1079,7 +1079,7 @@ const P = {
     r && (i.groupCollapsed("View the final response here."), i.log(r || "[No response returned]"), i.groupEnd());
   }
 };
-class ie extends A {
+class ie extends O {
   /**
    * @param {Object} [options]
    * @param {Array<Object>} [options.plugins] [Plugins]{@link https://developers.google.com/web/tools/workbox/guides/using-plugins}
@@ -1204,7 +1204,7 @@ function pe(r, e) {
     s > 0 && (n += ` ${s} file${s === 1 ? " is" : "s are"} already cached.`), i.groupCollapsed(n), K("View newly precached URLs.", r), K("View previously precached URLs.", e), i.groupEnd();
   }
 }
-class y extends A {
+class y extends O {
   /**
    *
    * @param {Object} [options]
@@ -1580,7 +1580,7 @@ function Re(r) {
 function Ce(r, e) {
   Re(r), be(e);
 }
-Ce([{"revision":null,"url":"assets/_commonjs-dynamic-modules-5a0829e8.js"},{"revision":null,"url":"assets/_plugin-vue_export-helper-c27b6911.js"},{"revision":null,"url":"assets/baseSolanaAdapter.esm-a677e575.js"},{"revision":null,"url":"assets/camera-51dc1d31.js"},{"revision":null,"url":"assets/dutch-9a1ae5c2-a16720c5.js"},{"revision":null,"url":"assets/ethereumProvider.esm-d579e450.js"},{"revision":null,"url":"assets/french-3d857bc5-8d49f87c.js"},{"revision":null,"url":"assets/german-4ae2ee33-5dea2eb8.js"},{"revision":null,"url":"assets/home-45395e97.css"},{"revision":null,"url":"assets/index-134dc01d.js"},{"revision":null,"url":"assets/index-146f08d4.js"},{"revision":null,"url":"assets/index-78058d01.css"},{"revision":null,"url":"assets/index-def8dafd.js"},{"revision":null,"url":"assets/inherits_browser-2c87d58f.js"},{"revision":null,"url":"assets/japanese-e1a7a06c-4e9481e4.js"},{"revision":null,"url":"assets/korean-95658e12-2c71056a.js"},{"revision":null,"url":"assets/mandarin-1e325876-bb618afe.js"},{"revision":null,"url":"assets/map-6bdc2685.js"},{"revision":null,"url":"assets/openloginAdapter.esm-1c584022.js"},{"revision":null,"url":"assets/phantomAdapter.esm-b95f7329.js"},{"revision":null,"url":"assets/portuguese-c1293d6a-397537de.js"},{"revision":null,"url":"assets/solanaProvider.esm-59cc0cc8.js"},{"revision":null,"url":"assets/spanish-54ba83ea-0b7cdddb.js"},{"revision":null,"url":"assets/torusEvmAdapter.esm-e6e1f258.js"},{"revision":null,"url":"assets/torusSolanaAdapter.esm-c799b648.js"},{"revision":null,"url":"assets/walletConnectV2Adapter.esm-1f786b75.js"},{"revision":"768a4398f8e71a78b776a4d617d7f39b","url":"index.html"},{"revision":"1872c500de691dce40960bb85481de07","url":"registerSW.js"},{"revision":"71dcfd191507c31dc79efe3341dfa3b9","url":"favicon.svg"},{"revision":"8e3a10e157f75ada21ab742c022d5430","url":"vite.svg"},{"revision":"f24c9384006bbc8de95ed69990459dca","url":"pwa-192x192.png"},{"revision":"fec3d5de970445c0dec54e8fc9d02c16","url":"192.png"},{"revision":"e76b48b22ff1f7d2123b81d22fe25792","url":"512.png"},{"revision":"0c62637d293076ac8c886e769a3e911c","url":"manifest.webmanifest"}]);
+Ce([{"revision":null,"url":"assets/_commonjs-dynamic-modules-538cca78.js"},{"revision":null,"url":"assets/_plugin-vue_export-helper-c27b6911.js"},{"revision":null,"url":"assets/baseSolanaAdapter.esm-f1dd8e7e.js"},{"revision":null,"url":"assets/camera-35649c05.js"},{"revision":null,"url":"assets/dutch-9a1ae5c2-a16720c5.js"},{"revision":null,"url":"assets/ethereumProvider.esm-7aea6695.js"},{"revision":null,"url":"assets/french-3d857bc5-8d49f87c.js"},{"revision":null,"url":"assets/german-4ae2ee33-5dea2eb8.js"},{"revision":null,"url":"assets/home-ccd71338.css"},{"revision":null,"url":"assets/index-04c1215f.js"},{"revision":null,"url":"assets/index-78058d01.css"},{"revision":null,"url":"assets/index-83bc3ffd.js"},{"revision":null,"url":"assets/index-e293f1b4.js"},{"revision":null,"url":"assets/inherits_browser-c319f7c7.js"},{"revision":null,"url":"assets/japanese-e1a7a06c-4e9481e4.js"},{"revision":null,"url":"assets/korean-95658e12-2c71056a.js"},{"revision":null,"url":"assets/mandarin-1e325876-bb618afe.js"},{"revision":null,"url":"assets/map-b24f5c78.js"},{"revision":null,"url":"assets/openloginAdapter.esm-c0f774cb.js"},{"revision":null,"url":"assets/phantomAdapter.esm-28844072.js"},{"revision":null,"url":"assets/portuguese-c1293d6a-397537de.js"},{"revision":null,"url":"assets/solanaProvider.esm-65bba879.js"},{"revision":null,"url":"assets/spanish-54ba83ea-0b7cdddb.js"},{"revision":null,"url":"assets/torusEvmAdapter.esm-0c02c47e.js"},{"revision":null,"url":"assets/torusSolanaAdapter.esm-390bb423.js"},{"revision":null,"url":"assets/walletConnectV2Adapter.esm-364ee623.js"},{"revision":"4500ee8dc61e100d783dcf6a0a1cc03d","url":"index.html"},{"revision":"1872c500de691dce40960bb85481de07","url":"registerSW.js"},{"revision":"71dcfd191507c31dc79efe3341dfa3b9","url":"favicon.svg"},{"revision":"8e3a10e157f75ada21ab742c022d5430","url":"vite.svg"},{"revision":"f24c9384006bbc8de95ed69990459dca","url":"pwa-192x192.png"},{"revision":"fec3d5de970445c0dec54e8fc9d02c16","url":"192.png"},{"revision":"e76b48b22ff1f7d2123b81d22fe25792","url":"512.png"},{"revision":"0c62637d293076ac8c886e769a3e911c","url":"manifest.webmanifest"}]);
 self.addEventListener("install", (r) => {
   r.waitUntil(
     new Promise((e) => {
@@ -1607,6 +1607,26 @@ self.addEventListener("push", (r) => {
       }, 3e3), e(!0);
     })
   );
+});
+self.addEventListener("notificationclick", function(r) {
+  r.notification.close();
+  var e = "https://192.168.5.100:5173";
+  r.waitUntil(
+    clients.matchAll({ type: "window" }).then(function(t) {
+      clients.openWindow(e);
+    })
+  );
+});
+self.addEventListener("message", (r) => {
+  if (r.data.type === "simulate-push") {
+    const e = {
+      body: "hello world.",
+      icon: "/favicon.svg"
+    };
+    setTimeout(() => {
+      self.registration.showNotification("Simulated Push Notification", e);
+    }, 3e3);
+  }
 });
 ae(new ie());
 self.skipWaiting();
