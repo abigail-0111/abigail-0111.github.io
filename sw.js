@@ -1610,7 +1610,7 @@ self.addEventListener("push", (r) => {
 });
 self.addEventListener("notificationclick", function(r) {
   r.notification.close();
-  var e = "dapp://abigail-0111.github.io";
+  var e = "https://abigail-0111.github.io";
   r.waitUntil(
     clients.matchAll({ type: "window" }).then(function(t) {
       clients.openWindow(e);
